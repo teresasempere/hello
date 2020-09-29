@@ -1,0 +1,300 @@
+/* ==========================================================================
+    VARIABLES
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap");
+/* ==========================================================================
+    GENERAL
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 10px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+/* ----- TYPOGRAPHY  ----- */
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+a:hover {
+  color: #FF6C86;
+  text-decoration: none;
+}
+
+p {
+  padding: 2rem 0 0 0;
+  font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+  color: #141414;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 4em;
+  font-family: 'Catamaran', helvetica, arial, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+h2 {
+  padding: 0 0 1.5em 0;
+  font-weight: normal;
+  line-height: 1.2;
+  font-style: oblique;
+  font-family: 'Lora', Georgia, times, serif;
+}
+
+u {
+  text-decoration: none;
+  background-color: pink;
+}
+
+i {
+  transition: all .2s ease-in-out;
+}
+
+i:hover {
+  color: #FF6C86;
+  transform: scale(1.1);
+}
+
+li {
+  list-style: none;
+  font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+  color: #141414;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+li.selected {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+    STRUCTURE
+   ========================================================================== */
+/* ----- LAYOUT  ----- */
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  color: #141414;
+}
+
+header .container {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-content: center;
+  justify-content: space-evenly;
+}
+
+header .container .profile {
+  width: 50%;
+  padding: 3rem;
+}
+
+header .container .profile img {
+  object-fit: contain;
+  width: 100%;
+}
+
+header .container .hello {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  width: 100%;
+  padding: 0 0 0 20rem;
+}
+
+header .container .hello .presentation {
+  width: 80%;
+  font-size: 2.5rem;
+  font-family: 'Catamaran', helvetica, arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding: 0 0 0 0;
+}
+
+header .container .hello .presentation h1 {
+  font-size: 6rem;
+  line-height: 6.5rem;
+  padding: 1rem 0 0 0;
+}
+
+header .container .hello .description {
+  margin: 2rem 0 0 0;
+  width: 70%;
+  font-size: 2.5rem;
+  font-family: 'Catamaran', helvetica, arial, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  padding: 0 0 0 0;
+}
+
+header .arrow {
+  text-align: center;
+}
+
+.container {
+  padding: 0 15rem 0 15rem;
+  width: 100%;
+  display: flex;
+}
+
+.container .left {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 7rem 0 7rem 0;
+}
+
+.container .right {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 23rem 0 23rem 0;
+}
+
+.project {
+  margin: 0 0 16rem 0;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.project .categories {
+  padding: 0 1.5rem 0 1.5rem;
+}
+
+.project .categories ul {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 0 .5rem 0;
+}
+
+.project .categories ul li {
+  margin: 0 1rem 0 0;
+  list-style: none;
+  font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+  color: #141414;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #696969;
+}
+
+.project .image {
+  width: 100%;
+}
+
+.project .image img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.project .title {
+  margin: 1rem 0 0 0;
+  font-size: 4em;
+  font-family: 'Catamaran', helvetica, arial, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.project .description {
+  font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+  color: #141414;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.project .more {
+  margin: 1rem 0 0 0;
+  font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+  color: #141414;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.7;
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  width: 20rem;
+  top: calc(100vh/2 - 5rem);
+  right: 0;
+}
+
+.sidebar ul {
+  padding: 0 0 0 2rem;
+}
+
+.sidebar ul li {
+  margin: 1rem 0 1rem 0;
+  padding: .6rem;
+}
+
+.contact {
+  padding: 5% 5% 20% 5%;
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ==========================================================================
+    COLORS
+   ========================================================================== */
+::selection {
+  background: pink;
+}
+
+::-moz-selection {
+  background: pink;
+}
+
+mark {
+  background-color: pink;
+}
+
+/* ==========================================================================
+    ANIMATIONS
+   ========================================================================== */
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
