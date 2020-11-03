@@ -40,6 +40,10 @@ html {
 
 /* ----- TYPOGRAPHY  ----- */
 
+.material-icons {
+    font-weight: 800;
+}
+
 a {
     text-decoration: none;
     color: $type;
@@ -54,29 +58,58 @@ p {
     padding: 2rem 0 0 0;
     font-family: 'Hind Madurai', helvetica, arial, sans-serif;
     color: $type;
-    font-size: 2rem;
+    font-size: 1.85rem;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 h1 {
-    font-size: 4em;
+    display: flex;
+    font-size: 4rem;
     font-family: 'Catamaran', helvetica, arial, sans-serif;
     font-weight: 900;
     font-style: normal;
+    color: $type;
 }
 
 h2 {
+    display: flex;
+    font-size: 3rem;
+    font-family: 'Catamaran', helvetica, arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: $type;
+}
+
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: oblique;
+    font-family: 'Lora', Georgia, times, serif;
+    color: $type;
+}
+
+h4 {
     padding: 0 0 1.5em 0;
+    font-size: 2.2rem;
     font-weight: normal;
     line-height: 1.2;
     font-style: oblique;
     font-family: 'Lora', Georgia, times, serif;
+    color: $type;
 }
 
-h3 {}
+.quote {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 3.5rem;
+    font-style: oblique;
+    font-family: 'Lora', Georgia, times, serif;
+    color: $type;
+}
 
-u{
+u {
     text-decoration: none;
     background-color: $highligh;
 }
@@ -90,15 +123,26 @@ i {
     }
 }
 
-li {
+ul {
     list-style: none;
+}
+
+li {
     font-family: 'Hind Madurai', helvetica, arial, sans-serif;
-    color: $type;
     font-size: 1.6rem;
     font-weight: 500;
 
     &.selected {
         text-decoration: underline;
+    }
+}
+
+.image {
+    width: 100%;
+
+    img {
+        object-fit: contain;
+        width: 100%;
     }
 }
 
@@ -109,7 +153,7 @@ li {
 
 /* ----- LAYOUT  ----- */
 
-header {
+.first {
     height: 100vh;
     width: 100%;
     display: flex;
@@ -118,7 +162,7 @@ header {
     //color: white;
     color: $type;
 
-    .container {
+    .index_container {
         width: 100%;
         padding: 0;
         display: flex;
@@ -200,7 +244,7 @@ header {
         align-content: center;
         align-items: center;
         width: 50%;
-        padding: 23rem 0 23rem 0;
+        padding: 23rem 0 4% 0;
     }
 
 }
@@ -253,7 +297,7 @@ header {
 
         font-family: 'Hind Madurai', helvetica, arial, sans-serif;
         color: $type;
-        font-size: 1.8rem;
+        font-size: 2.1rem;
         font-weight: 300;
         line-height: 1.7;
     }
@@ -288,7 +332,7 @@ header {
 }
 
 .contact {
-    padding: 5% 5% 20% 5%;
+    padding: 1% 5% 20% 5%;
     display: flex;
     flex-flow: column wrap;
     align-content: center;
@@ -296,6 +340,252 @@ header {
     text-align: center;
 }
 
+
+
+/* ----- ARTICLE  ----- */
+
+.navigation {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    padding: 4rem 5rem 4rem 5rem;
+
+    .categories {
+        width: 75%;
+
+        ul {
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 0 .5rem 0;
+
+            li {
+                margin: 0 1rem 0 0;
+                list-style: none;
+                font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+                color: $type;
+                font-size: 1.7rem;
+                font-weight: 400;
+                line-height: 1.6;
+                color: $category;
+            }
+        }
+
+    }
+
+    .arrows {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        width: 25%;
+
+        .nav_item {
+            padding: 0 1rem 0 0;
+        }
+    }
+}
+
+main {
+    .head {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        align-items: center;
+        margin: 0 0 6rem 0;
+
+        .title {
+            display: flex;
+            flex-flow: row-reverse nowrap;
+
+            h1 {
+                margin: 2rem;
+            }
+        }
+
+        .cover {
+            width: 900px;
+
+            img {
+                object-fit: contain;
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    .art_container {
+
+        .index {
+            position: fixed;
+            top: 250px;
+            right: 1px;
+            padding: 2%;
+            width: 20%;
+
+            li {
+                padding: 1.2rem 0 0 0;
+                font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+                font-family: 'Lora', Georgia, times, serif;
+                font-size: 1.7rem;
+                font-weight: 600;
+                line-height: 1.6;
+            }
+        }
+
+        .ugo {
+            li {
+                a {
+                    color: #1EBFDC;
+                }
+            }
+
+            u {
+                text-decoration: none;
+                background-color: lighten($color: #1EBFDC, $amount: 30);
+            }
+        }
+
+        .mnad {
+            li {
+                a {
+                    color: #FF6C86;
+                }
+            }
+
+            u {
+                text-decoration: none;
+                background-color: lighten($color: #FF6C86, $amount: 30);
+            }
+        }
+
+        .signage {
+            li {
+                a {
+                    color: darken($color: #F39F1C, $amount: 10);
+                }
+            }
+
+            u {
+                text-decoration: none;
+                background-color: lighten($color: #F39F1C, $amount: 30);
+            }
+        }
+
+
+        h2 {
+            padding: 0 0 1.6rem 0;
+        }
+
+        h3 {
+            padding: 0 0 1.6rem 0;
+        }
+
+        article {
+
+            padding: 0 27% 6% 27%;
+
+            .eduardo {
+                padding: 1rem 0 2rem 0;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+
+                .image {
+                    width: 35%;
+
+                    img {
+                        object-fit: contain;
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .columns {
+                padding: 2.5rem 0 4rem 0;
+                margin: 2rem 0 0 0;
+                column-count: 2;
+                column-gap: 50px;
+                //background-color: #DBF4F8;
+
+                .title {
+                    padding: 2rem 0 0 0;
+                    display: flex;
+                    font-size: 2rem;
+                    font-family: 'Catamaran', helvetica, arial, sans-serif;
+                    font-weight: 800;
+                    font-style: normal;
+                    color: $type;
+                }
+            }
+
+        }
+
+        .bullet_points {
+            padding: 2rem 0 0 2.5rem;
+            ul {
+                list-style-type: circle;
+                list-style-position: outside;
+                li {
+                    padding:  0 0 2rem 0;
+                    font-family: 'Hind Madurai', helvetica, arial, sans-serif;
+                    font-size: 1.85rem;
+                    font-weight: 300;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+        .comic {
+            padding: 0 0 10rem 0;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            width: 100%;
+
+            .row {
+                padding: 0 0 2.5rem 0;
+                width: 900px;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+
+                .strip {
+                    width: 46%;
+
+                    .image {
+                        width: 100%;
+
+                        img {
+                            object-fit: contain;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .article_image {
+        width: 100%;
+        padding: 6% 0 6% 0 ;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+        }
+    }
+}
+
+
+/* ----- UGO  ----- */
+
+.illustrations {
+    .il1 {
+        position: absolute;
+    }
+}
 
 /* ==========================================================================
     COLORS
@@ -312,6 +602,21 @@ header {
 
 mark {
     background-color: $highligh;
+}
+
+.ugo {
+    ::selection {
+        background: lighten($color: #1EBFDC, $amount: 30);
+    }
+
+    ::-moz-selection {
+        background: lighten($color: #1EBFDC, $amount: 30);
+
+    }
+
+    mark {
+        background: lighten($color: #1EBFDC, $amount: 30);
+    }
 }
 
 
